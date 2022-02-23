@@ -43,10 +43,10 @@ function checkPassword(event){
      // Проверки предыдущие завершены, но все равно прерываем отправку формы
      event.preventDefault();
      // вызываем фукнцию checkLogin, которая будет создана ниже
-     checkLogin();
+     checklogin();
 }
 
-async function checkLogin(){
+async function checklogin(){
     // получаем данные из формы, отправляем на сервер через js через ajax, 
     // получаем ответ и выводим  сообщение в случае ошибки
     // т.к.выполняется запрос на сервер перед function дописываем async
@@ -56,7 +56,7 @@ async function checkLogin(){
     // в объект FormData запишем Логин
     data.append('login', login);
     // Выполняем запрос на сервер
-    let response = await fetch('checkLogin.php', {
+    let response = await fetch('checklogin.php', {
         method: "POST",
         body: data
     });

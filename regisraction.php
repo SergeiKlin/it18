@@ -14,4 +14,6 @@ VALUES('$name', '$login', '$email', '$password')";
 $link->query($query) or die($link->error);
 // Выполняем запрос и закрываем подключение к БД
 $link->close();
+// переходим на страницу авторизации
+header("location: /login.php");
 ?>

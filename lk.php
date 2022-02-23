@@ -9,8 +9,11 @@
 </head>
 <body>
     <?php
+    session_start();
     include 'nav.php';
-    nav(4);
+    nav(1);
+    var_dump($_SESSION['login']);
+    var_dump($_SESSION['userid']);
     ?>
 </body>
 </html>

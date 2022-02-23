@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,11 @@
 <body>
     <?php
     include 'nav.php';
-    nav(3);
+    nav(1);
+    echo "Вы вошли под именем ";
+    session_start();
+    print_r($_SESSION['login']);
+    print_r($_SESSION['userid']);
     ?>
 </body>
 </html>

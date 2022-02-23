@@ -41,5 +41,5 @@ nav a.active{
 }
 
 #error{
-    display: none;
+    display: block;
 }
